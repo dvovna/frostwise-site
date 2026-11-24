@@ -1,0 +1,52 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { test } from 'node:test';
+
+const root = new URL('../', import.meta.url);
+const pages = ['index.html', 'ru/index.html'];
+
+function readPage(path) {
+  return readFileSync(new URL(path, root), 'utf8');
+}
+
+test('both pages carry the same sections in the same order', () => {
+  const ids = (html) => [...html.matchAll(/<section id="([^"]+)"/g)].map((m) => m[1]);
+  for (const page of pages) {
+    assert.deepEqual(ids(readPage(page)), ['what', 'beta', 'signup', 'data']);
+  }
+});
+
+test('each page names its language and links both versions', () => {
+  assert.match(readPage('index.html'), /<html lang="en">/);
+  assert.match(readPage('ru/index.html'), /<html lang="ru">/);
+  for (const page of pages) {
+    const html = readPage(page);
+    assert.match(html, /hreflang="en" href="https:\/\/frostwise\.app\/"/);
+    assert.match(html, /hreflang="ru" href="https:\/\/frostwise\.app\/ru\/"/);
+    assert.match(html, /hreflang="x-default" href="https:\/\/frostwise\.app\/"/);
+  }
+});
+
+test('nothing is loaded from another host but the form', () => {
+  for (const file of [...pages, 'styles.css']) {
+    const hosts = [...readPage(file).matchAll(/(?:src|href)="https:\/\/([^/"]+)/g)]
+      .map((m) => m[1])
+      .filter((host) => host !== 'frostwise.app' && host !== 'docs.google.com');
+    assert.deepEqual([...new Set(hosts)], [], file);
+  }
+  assert.doesNotMatch(readPage('styles.css'), /url\(["']?https?:/);
+});
+
+test('the pages run no scripts', () => {
+  for (const page of pages) assert.doesNotMatch(readPage(page), /<script/);
+});
+
+test('body text is at least 16px and targets at least 48px', () => {
+  const css = readPage('styles.css');
+  assert.match(css, /body\s*{[^}]*font-size:\s*(1[6-9]|2\d)px/);
+  assert.match(css, /--target:\s*48px/);
+});
+
+test('the domain file names frostwise.app', () => {
+  assert.equal(readPage('CNAME').trim(), 'frostwise.app');
+});

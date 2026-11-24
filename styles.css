@@ -1,0 +1,73 @@
+/* Values from the app's Warm Garden tokens (src/theme/tokens.ts in dvovna/garden-planner). */
+:root {
+  --cream: #f3ecdd;
+  --paper: #fbf7ee;
+  --hairline: #dccfb4;
+  --hairline-soft: #e8ddc6;
+  --outline-strong: #8e7b55;
+  --ink: #26332a;
+  --ink-muted: #5e665a;
+  --ink-soft: #6b6a5c;
+  --eyebrow: #7a5c34;
+  --forest: #2f4a34;
+  --forest-text: #f3ecdd;
+  --forest-text-muted: #cfd8c6;
+  --butter: #f2d9a0;
+  --hint-good: #e1e8d6;
+  --target: 48px;
+  --gutter: 16px;
+  --radius: 16px;
+}
+
+@font-face {
+  font-family: Lora;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/Lora-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: Lora;
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  src: url('fonts/Lora-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: Nunito;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/Nunito-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: Nunito;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/Nunito-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: Nunito;
+  font-weight: 800;
+  font-display: swap;
+  src: url('fonts/Nunito-ExtraBold.ttf') format('truetype');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: Nunito, system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
