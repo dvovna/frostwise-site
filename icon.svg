@@ -1,0 +1,11 @@
+<!-- The full square icon: the legacy launcher icon and the Google Play listing. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108">
+<rect width="108" height="108" fill="#F3ECDD"/>
+<g transform="translate(54 54) scale(1.1) translate(-54 -54)">
+  <rect x="30" y="34" width="48" height="44" rx="11" fill="#2F4A34"/>
+  <path d="M30 49H78M30 63H78M46 34V78M62 34V78" stroke="#F3ECDD" stroke-opacity="0.22" stroke-width="1.4"/>
+  <path d="M54 70V44" stroke="#F2D9A0" stroke-width="3.6" stroke-linecap="round"/>
+  <path d="M54 52C46 52 40 46 40 38C48 38 54 44 54 52Z" fill="#F2D9A0"/>
+  <path d="M54 46C54 38 60 32 68 32C68 40 62 46 54 46Z" fill="#7FA36E"/>
+</g>
+</svg>

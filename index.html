@@ -3,10 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Frostwise</title>
+    <title>Frostwise — your garden by your frost dates</title>
+    <meta name="description" content="A plan of your beds and a planting calendar for your exact place. Free, no subscriptions. Beta test on Android in January.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://frostwise.app/">
+    <meta property="og:title" content="Frostwise — your garden by your frost dates">
+    <meta property="og:description" content="A plan of your beds and a planting calendar for your exact place. Free, no subscriptions. Beta test on Android in January.">
+    <meta property="og:image" content="https://frostwise.app/og.png">
+    <meta property="og:locale" content="en_US">
     <link rel="alternate" hreflang="en" href="https://frostwise.app/">
     <link rel="alternate" hreflang="ru" href="https://frostwise.app/ru/">
     <link rel="alternate" hreflang="x-default" href="https://frostwise.app/">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
@@ -14,16 +22,56 @@
       <div class="wrap">
         <nav class="bar">
           <span class="wordmark">Frostwise</span>
-          <a class="lang" href="/ru/">Русский</a>
+          <a class="lang" href="/ru/" hreflang="ru" lang="ru">Русский</a>
         </nav>
+        <h1>Your garden by your frost dates</h1>
+        <p class="lead">A plan of your beds and a planting calendar for your exact place. Free, no subscriptions.</p>
+        <a class="chip" href="#signup">Beta test in January — sign up</a>
       </div>
     </header>
     <main class="wrap">
-      <section id="what"></section>
-      <section id="beta"></section>
-      <section id="signup"></section>
-      <section id="data"></section>
+      <section id="what">
+        <h2 class="eyebrow">What it does</h2>
+        <ul class="points">
+          <li class="point">
+            <span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21V11M12 11c0-4 3-7 8-7 0 5-3 8-8 7Zm0 3c0-3-2-5-6-5 0 4 2 6 6 5Z"/></svg></span>
+            <p><strong>Plot plan</strong> beds of any shape, planting by squares</p>
+          </li>
+          <li class="point">
+            <span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2v20M3.3 7l17.4 10M3.3 17l17.4-10M9 3.5l3 2 3-2M9 20.5l3-2 3 2"/></svg></span>
+            <p><strong>Frost dates for your place</strong> from long-term weather, and you can correct them</p>
+          </li>
+          <li class="point">
+            <span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4l2-2Zm4 4h4"/></svg></span>
+            <p><strong>Reminders and frost warnings</strong> at most one reminder a day</p>
+          </li>
+        </ul>
+      </section>
+      <section id="beta">
+        <h2 class="eyebrow">How to join the beta</h2>
+        <ol class="steps">
+          <li>Leave your Gmail address below</li>
+          <li>In January we send you a link to the test on Google Play</li>
+          <li>Use the app for two weeks and tell us what gets in the way</li>
+        </ol>
+        <p class="note">Google Play lets testers in by their Google account, so we ask for a Gmail address.</p>
+      </section>
+      <section id="signup">
+        <h2 class="eyebrow">Sign up</h2>
+        <div class="form">
+          <iframe class="form-frame" src="FORM_URL_EN?embedded=true" title="Sign-up form" loading="lazy"></iframe>
+          <a class="form-link" href="FORM_URL_EN" target="_blank" rel="noopener">Open the form in a new tab</a>
+        </div>
+      </section>
+      <section id="data">
+        <h2 class="eyebrow">Your data</h2>
+        <p class="note">We keep your Google address, country and phone model in a Google Sheet only we can open, to invite you to the beta and tell you about the launch. We delete the list after the launch. Write to <a href="mailto:hello@frostwise.app">hello@frostwise.app</a> and we delete your entry sooner.</p>
+      </section>
     </main>
-    <footer class="wrap"></footer>
+    <footer class="wrap foot">
+      <span>Android, spring 2027</span>
+      <a href="mailto:hello@frostwise.app">hello@frostwise.app</a>
+      <a href="/ru/" hreflang="ru" lang="ru">Русский</a>
+    </footer>
   </body>
 </html>

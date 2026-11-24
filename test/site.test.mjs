@@ -47,6 +47,29 @@ test('body text is at least 16px and targets at least 48px', () => {
   assert.match(css, /--target:\s*48px/);
 });
 
+test('the copy promises nothing beyond the beta', () => {
+  for (const page of pages) {
+    assert.doesNotMatch(readPage(page), /\bAI\b|\bИИ\b|iPhone|iOS|premium|подписк[аиу] за/i);
+  }
+});
+
+test('each page shares a title, a description and an image', () => {
+  for (const page of pages) {
+    const html = readPage(page);
+    assert.match(html, /<meta property="og:title" content="[^"]+">/);
+    assert.match(html, /<meta property="og:description" content="[^"]+">/);
+    assert.match(html, /<meta property="og:image" content="https:\/\/frostwise\.app\/og\.png">/);
+  }
+});
+
+test('the form has a plain link beside its frame', () => {
+  for (const page of pages) {
+    const signup = readPage(page).split('<section id="signup"')[1].split('</section>')[0];
+    assert.match(signup, /<iframe class="form-frame"/);
+    assert.match(signup, /<a class="form-link"/);
+  }
+});
+
 test('the domain file names frostwise.app', () => {
   assert.equal(readPage('CNAME').trim(), 'frostwise.app');
 });
