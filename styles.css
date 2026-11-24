@@ -95,6 +95,15 @@ a {
   font-size: 20px;
 }
 
+/* On inner pages the wordmark leads home. */
+a.wordmark {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target);
+  color: var(--forest-text);
+  text-decoration: none;
+}
+
 .lang {
   display: inline-flex;
   align-items: center;
@@ -259,4 +268,85 @@ section {
   display: inline-flex;
   align-items: center;
   min-height: var(--target);
+}
+
+/* Privacy policy */
+
+.hero-short {
+  padding-bottom: 16px;
+}
+
+.policy h2 {
+  margin: 0 0 12px;
+  font-family: Lora, Georgia, serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.policy h3 {
+  margin: 24px 0 8px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.policy p,
+.policy ul {
+  margin: 0 0 12px;
+}
+
+.policy ul {
+  padding-left: 24px;
+}
+
+.policy li + li {
+  margin-top: 8px;
+}
+
+.processors {
+  width: 100%;
+  margin: 0 0 12px;
+  border-collapse: collapse;
+}
+
+.processors th,
+.processors td {
+  padding: 8px 8px 8px 0;
+  border-bottom: 1px solid var(--hairline-soft);
+  text-align: left;
+  vertical-align: top;
+}
+
+.processors th {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--eyebrow);
+}
+
+/* Three columns are too narrow on a phone: each company becomes a block of its own. */
+@media (max-width: 560px) {
+  .processors thead {
+    display: none;
+  }
+
+  .processors tr,
+  .processors td {
+    display: block;
+  }
+
+  .processors tr {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--hairline-soft);
+  }
+
+  .processors td {
+    padding: 0;
+    border: 0;
+  }
+
+  .processors td:last-child {
+    color: var(--ink-soft);
+  }
 }

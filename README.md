@@ -3,6 +3,8 @@
 The waitlist page of Frostwise, a garden planner for Android: English at `/`, Russian at `/ru/`.
 Visitors sign up for the closed beta through an embedded Google Form, one per language, whose
 answers go to one Google Sheet (`FORMS.md`).
+The privacy policy of the app and the site is at `/privacy/` and `/ru/privacy/`; the app's
+Data safety answers in Play Console match it (`docs/play-console.md` in the app repository).
 
 Plain HTML and CSS served by GitHub Pages with the custom domain in `CNAME`: no build step, no
 scripts, nothing loaded from another host except the form. Colours and fonts follow the app's

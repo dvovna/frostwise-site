@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy policy — Frostwise</title>
+    <meta name="description" content="What the Frostwise app and this site collect, why, where it is kept, for how long, and how to delete it.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://frostwise.app/privacy/">
+    <meta property="og:title" content="Privacy policy — Frostwise">
+    <meta property="og:description" content="What the Frostwise app and this site collect, why, where it is kept, for how long, and how to delete it.">
+    <meta property="og:image" content="https://frostwise.app/og.png">
+    <meta property="og:locale" content="en_US">
+    <link rel="alternate" hreflang="en" href="https://frostwise.app/privacy/">
+    <link rel="alternate" hreflang="ru" href="https://frostwise.app/ru/privacy/">
+    <link rel="alternate" hreflang="x-default" href="https://frostwise.app/privacy/">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="hero hero-short">
+      <div class="wrap">
+        <nav class="bar">
+          <a class="wordmark" href="/">Frostwise</a>
+          <a class="lang" href="/ru/privacy/" hreflang="ru" lang="ru">Русский</a>
+        </nav>
+        <h1>Privacy policy</h1>
+        <p class="lead">Last updated 24 November 2026</p>
+      </div>
+    </header>
+    <main class="wrap policy">
+      <section id="summary">
+        <h2>In short</h2>
+        <ul>
+          <li>Frostwise works without an account. Your garden, its place and your tasks stay on your phone.</li>
+          <li>For frost dates and weather the app sends only an area of about 28 km, never your exact place, and nothing that tells who asked.</li>
+          <li>An account is optional. With one, we keep your Google email address and a copy of your garden, so you get it back on a new phone.</li>
+          <li>Usage statistics and crash reports carry no name, email, place or garden. You can turn statistics off.</li>
+          <li>No ads, no advertising ID, no selling or sharing of your data, no precise location.</li>
+        </ul>
+      </section>
+
+      <section id="who">
+        <h2>Who we are</h2>
+        <p>Frostwise is an Android garden planner made by Dzmitry Vouna, a private developer in Belarus ("we"). We decide what is collected and why, and answer for it. Write to <a href="mailto:support@frostwise.app">support@frostwise.app</a> about anything in this policy.</p>
+        <p>This policy covers the Frostwise app and this site, frostwise.app.</p>
+      </section>
+
+      <section id="app">
+        <h2>What the app sends, and why</h2>
+
+        <h3>Where your garden is, for frost dates and weather</h3>
+        <p>You can place your garden with the phone's location, by searching for a town, or by entering frost dates yourself. The app asks for approximate location only, while it is open, and only when you press "Use this phone's location". It never asks for precise or background location.</p>
+        <p>The garden's coordinates stay on the phone. To get frost dates and forecasts the app rounds them to a square of 0.25° (about 28 km) and sends only the centre of that square to our server. The request carries no account, no device id and nothing else that tells who asked. Our server fetches the weather for that square from Open-Meteo, which sees only our server and the square.</p>
+
+        <h3>Searching for a town</h3>
+        <p>What you type in the place search, and the app's language, go to our server, which looks it up with Nominatim, the OpenStreetMap Foundation's search service. Nominatim sees our server, not your phone. Searches are kept in the server's memory only, up to the last 500, so the same search is not asked twice, and are gone when the server restarts. They are never written to a database or a log. Type a town or a village: an exact address is not needed.</p>
+
+        <h3>Your account (optional)</h3>
+        <p>You can sign in with Google. Google tells our server your email address and a Google account number, and nothing else: we ask only for <em>openid</em>, <em>email</em> and <em>profile</em>, and keep the email and the number. We use them to know your account, to show you which account you are signed in with, and to answer you if you write to us. We do not send you marketing.</p>
+
+        <h3>The copy of your garden in your account</h3>
+        <p>While you are signed in, the app keeps a copy of your garden on our server: the beds, plantings and notes of each season, the garden's name, place and frost dates, and which tasks you marked done or put off. It is there so you get your garden back on a new phone and do not lose it. We keep the latest copy of each season only; earlier versions stay on your phone.</p>
+
+        <h3>Usage statistics</h3>
+        <p>To see which parts of the app are used, the app sends events such as "the app was opened" or "a task was ticked off", each with the calendar day and a random number made for this install. Nothing else: no time of day, account, email, place, garden, phone model or advertising ID. The random number is not linked to your account. Our server does not keep your IP address with them.</p>
+        <p>Statistics are on unless you turn them off in <strong>More → Usage statistics</strong>. Turning them off deletes the random number and anything not yet sent; turning them on again starts a new number.</p>
+
+        <h3>Crash reports</h3>
+        <p>When the app fails, it sends a report to Sentry so we can fix it: what went wrong in the code, the app version, the phone model and Android version, and a random number Sentry makes for the install. Reports carry no email, place, garden or screenshot, and Sentry is set to keep no IP address. Our server sends its own error reports to Sentry the same way, with email addresses and numbers masked.</p>
+
+        <h3>App updates</h3>
+        <p>When the app starts it asks Expo, the maker of the framework it is built on, whether a newer version of its code is out. The request carries the app's version and a random number for the install, which Expo uses to count updates.</p>
+
+        <h3>Android backup</h3>
+        <p>Android backs up the app's data, your garden included, to your own Google account, and restores it on a new phone. Google runs this under your Google account and its terms; we cannot see the backup. You can turn it off in the phone's settings.</p>
+
+        <h3>Writing to us</h3>
+        <p>"Send feedback" in the app opens your own mail app with a new letter to support@frostwise.app, which says the app version, the Android version and the app's language. You see it and send it yourself. We keep letters for as long as we need them to answer you.</p>
+      </section>
+
+      <section id="never">
+        <h2>What we never collect</h2>
+        <p>Precise or background location, contacts, photos, files you did not choose, the advertising ID, or payment details. The app has no ads and no paid features. We do not sell your data or share it with anyone for their own use.</p>
+      </section>
+
+      <section id="processors">
+        <h2>Who processes the data for us</h2>
+        <p>These companies hold or pass on data only to provide their service to us, under their data processing terms.</p>
+        <table class="processors">
+          <thead>
+            <tr><th scope="col">Company</th><th scope="col">What it does</th><th scope="col">Where</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><a href="https://fly.io/legal/privacy-policy">Fly.io</a></td><td>runs our server and its database; sees IP addresses to deliver requests</td><td>Frankfurt, Germany</td></tr>
+            <tr><td><a href="https://www.backblaze.com/company/policy/privacy">Backblaze</a></td><td>keeps the server's encrypted backups</td><td>EU (Netherlands)</td></tr>
+            <tr><td><a href="https://sentry.io/privacy/">Sentry</a></td><td>crash and error reports</td><td>Germany</td></tr>
+            <tr><td><a href="https://policies.google.com/privacy">Google</a></td><td>sign-in, Android backup, Google Play, the beta sign-up form</td><td>worldwide</td></tr>
+            <tr><td><a href="https://expo.dev/privacy">Expo</a></td><td>app updates</td><td>USA</td></tr>
+            <tr><td><a href="https://open-meteo.com/en/terms">Open-Meteo</a></td><td>weather and climate data for a 28 km square</td><td>EU</td></tr>
+            <tr><td><a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation</a> (Nominatim)</td><td>finding a town by name</td><td>UK and EU</td></tr>
+            <tr><td><a href="https://porkbun.com/legal/agreement/privacy_policy">Porkbun</a></td><td>forwards mail sent to frostwise.app addresses to our mailbox</td><td>USA</td></tr>
+            <tr><td><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub</a></td><td>hosts this site; sees visitors' IP addresses</td><td>USA</td></tr>
+          </tbody>
+        </table>
+        <p>Where data goes to a company in the USA, it goes under that company's data processing terms, which rely on the EU–US Data Privacy Framework or the European Commission's standard contractual clauses. If you live in Russia: data on our server is stored in Germany, not in Russia.</p>
+      </section>
+
+      <section id="retention">
+        <h2>How long we keep it</h2>
+        <ul>
+          <li><strong>Account and the copy of your garden:</strong> until you delete the account. Daily backups hold them for 30 more days and then expire.</li>
+          <li><strong>Deleted accounts:</strong> the account's random id, with no email, for 35 days, so a backup restored in that time cannot bring the account back.</li>
+          <li><strong>Usage statistics:</strong> 13 months, then deleted automatically.</li>
+          <li><strong>Crash reports:</strong> 30 days at Sentry.</li>
+          <li><strong>Server error logs:</strong> 7 days, with no IP address or account.</li>
+          <li><strong>Weather squares:</strong> the weather of a square is kept, and the last day anyone asked for it; nothing about who asked.</li>
+          <li><strong>Place searches:</strong> in the server's memory only, until it restarts.</li>
+          <li><strong>Beta sign-up:</strong> until the launch in spring 2027.</li>
+        </ul>
+      </section>
+
+      <section id="delete">
+        <h2>Deleting your account</h2>
+        <p>Deleting the account removes it, your email address, the copy of your garden and your task marks from our server at once. Backups that still hold them expire within 30 days. The garden on your phone stays until you delete the app.</p>
+        <ul>
+          <li><strong>In the app:</strong> More → Account → Delete account.</li>
+          <li><strong>On the web, without the app:</strong> open <a href="https://api.frostwise.app/v1/account/delete">api.frostwise.app/v1/account/delete</a>, sign in with the same Google account, check it is yours and delete it.</li>
+          <li><strong>By mail:</strong> write to <a href="mailto:support@frostwise.app">support@frostwise.app</a> from the Google address of the account, and we delete it within 30 days.</li>
+        </ul>
+        <p>Usage statistics cannot be deleted per person, since nothing links them to you or your account; they are deleted after 13 months. Turning statistics off stops them at once.</p>
+      </section>
+
+      <section id="rights">
+        <h2>Your rights</h2>
+        <p>We use your data because you asked for what it does (an account, the copy of your garden, frost dates, a search), and for our legitimate interest in keeping the app working and knowing which parts are used, which you can refuse by turning statistics off.</p>
+        <p>You can ask us for a copy of your data, to correct it, to delete it, or to stop using it, and you can object to statistics. Write to <a href="mailto:support@frostwise.app">support@frostwise.app</a>; we answer within 30 days. You may also complain to the data protection authority where you live.</p>
+      </section>
+
+      <section id="children">
+        <h2>Children</h2>
+        <p>Frostwise is made for adult gardeners and is not directed at children. We do not knowingly collect data from children under 16. If you think a child has given us data, write to us and we delete it.</p>
+      </section>
+
+      <section id="site">
+        <h2>This site and the beta sign-up</h2>
+        <p>This site sets no cookies and runs no scripts. GitHub, which hosts it, sees your IP address when you open it.</p>
+        <p>The sign-up form for the beta is a Google Form. It records the Google address you are signed in with, your country and, if you give it, your phone model, in a Google Sheet only we can open. We use them only to invite you to the beta on Google Play and to tell you about the launch, and delete the list after the launch. Write to <a href="mailto:hello@frostwise.app">hello@frostwise.app</a> and we delete your entry sooner.</p>
+      </section>
+
+      <section id="changes">
+        <h2>Changes to this policy</h2>
+        <p>When the app starts collecting something new, this page changes before the app does, and the date at the top changes with it.</p>
+      </section>
+    </main>
+    <footer class="wrap foot">
+      <span>Android, spring 2027</span>
+      <a href="mailto:support@frostwise.app">support@frostwise.app</a>
+      <a href="/">Home</a>
+      <a href="/ru/privacy/" hreflang="ru" lang="ru">Русский</a>
+    </footer>
+  </body>
+</html>
