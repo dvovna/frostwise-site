@@ -70,6 +70,16 @@ test('the form has a plain link beside its frame', () => {
   }
 });
 
+test('both forms are linked, each in its own language', () => {
+  const form = /https:\/\/docs\.google\.com\/forms\/d\/e\/([\w-]+)\/viewform/g;
+  const en = [...readPage('index.html').matchAll(form)].map((m) => m[1]);
+  const ru = [...readPage('ru/index.html').matchAll(form)].map((m) => m[1]);
+  assert.equal(new Set(en).size, 1);
+  assert.equal(new Set(ru).size, 1);
+  assert.notEqual(en[0], ru[0]);
+  for (const page of pages) assert.doesNotMatch(readPage(page), /FORM_URL_/);
+});
+
 test('the domain file names frostwise.app', () => {
   assert.equal(readPage('CNAME').trim(), 'frostwise.app');
 });
