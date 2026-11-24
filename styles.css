@@ -228,6 +228,19 @@ section {
   text-align: center;
 }
 
+.form-hint {
+  margin: 0 0 16px;
+  color: var(--ink-soft);
+}
+
+/* An inline link in a sentence, not the bar under the frame. */
+.form-hint .form-link {
+  display: inline;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+}
+
 /* Footer */
 
 .foot {

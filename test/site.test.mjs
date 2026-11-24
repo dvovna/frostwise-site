@@ -89,6 +89,15 @@ test('both forms are linked, each in its own language', () => {
   for (const page of pages) assert.doesNotMatch(readPage(page), /FORM_URL_/);
 });
 
+test('a way out of a blank or sign-in frame comes before the frame', () => {
+  for (const page of pages) {
+    const signup = readPage(page).split('<section id="signup"')[1].split('</section>')[0];
+    const hint = signup.indexOf('<p class="form-hint">');
+    assert.ok(hint !== -1 && hint < signup.indexOf('<iframe'), page);
+    assert.match(signup.slice(hint, signup.indexOf('<iframe')), /<a class="form-link"/);
+  }
+});
+
 test('the domain file names frostwise.app', () => {
   assert.equal(readPage('CNAME').trim(), 'frostwise.app');
 });
