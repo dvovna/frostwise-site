@@ -47,10 +47,19 @@ test('body text is at least 16px and targets at least 48px', () => {
   assert.match(css, /--target:\s*48px/);
 });
 
-test('the copy promises nothing beyond the beta', () => {
-  for (const page of pages) {
-    assert.doesNotMatch(readPage(page), /\bAI\b|\bИИ\b|iPhone|iOS|premium|подписк[аиу] за/i);
+// \b knows only ASCII word characters, so the Russian words are bounded by \p{L} instead.
+const beyondBeta =
+  /\bAI\b|(?<!\p{L})ИИ(?!\p{L})|нейросет|искусственн|iPhone|iOS|premium|подписк[аиу] за/iu;
+
+test('the beta check catches promises in either language', () => {
+  for (const claim of ['an AI helper', 'помощник на ИИ.', 'нейросеть подскажет', 'on iPhone']) {
+    assert.match(claim, beyondBeta, claim);
   }
+  assert.doesNotMatch('Detailed plan, без подписок', beyondBeta);
+});
+
+test('the copy promises nothing beyond the beta', () => {
+  for (const page of pages) assert.doesNotMatch(readPage(page), beyondBeta);
 });
 
 test('each page shares a title, a description and an image', () => {
